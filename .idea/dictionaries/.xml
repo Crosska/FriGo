@@ -2,7 +2,10 @@
   <dictionary name="Владислав">
     <words>
       <w>bahnschrift</w>
+      <w>edittext</w>
       <w>frigo</w>
+      <w>imageview</w>
+      <w>textview</w>
     </words>
   </dictionary>
 </component>
