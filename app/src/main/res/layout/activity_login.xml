@@ -25,12 +25,12 @@
         android:layout_width="383dp"
         android:layout_height="142dp"
         android:layout_marginStart="14dp"
-        android:layout_marginTop="96dp"
         android:layout_marginEnd="14dp"
+        android:layout_marginBottom="16dp"
         card_view:cardCornerRadius="10dp"
+        card_view:layout_constraintBottom_toTopOf="@+id/login_button"
         card_view:layout_constraintEnd_toEndOf="parent"
-        card_view:layout_constraintStart_toStartOf="parent"
-        card_view:layout_constraintTop_toBottomOf="@+id/textView">
+        card_view:layout_constraintStart_toStartOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -53,14 +53,19 @@
                 <ImageView
                     android:layout_width="30dp"
                     android:layout_height="wrap_content"
-                    android:layout_margin="3dp"
+                    android:layout_marginStart="5dp"
                     android:src="@drawable/account" />
 
                 <EditText
-                    android:id="@+id/editText"
+                    android:id="@+id/login_edittext"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint=" Логин"
+                    android:layout_marginEnd="5dp"
+                    android:fontFamily="@font/comfortaa_light"
+                    android:hint="Логин"
+                    android:inputType="textPersonName"
+                    android:textColor="@color/colorAccent"
+                    android:textColorHint="@color/colorAccent"
                     android:textSize="20sp"
                     card_view:layout_constraintEnd_toEndOf="parent"
                     card_view:layout_constraintStart_toStartOf="parent"
@@ -80,18 +85,23 @@
                 <ImageView
                     android:layout_width="30dp"
                     android:layout_height="wrap_content"
-                    android:layout_margin="3dp"
+                    android:layout_marginStart="5dp"
                     android:src="@drawable/lock" />
 
                 <EditText
-                    android:id="@+id/editText2"
+                    android:id="@+id/password_edittext"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint=" Пароль"
+                    android:layout_marginEnd="5dp"
+                    android:fontFamily="@font/comfortaa_light"
+                    android:hint="Пароль"
+                    android:inputType="textPassword"
+                    android:textColor="@color/colorAccent"
+                    android:textColorHint="@color/colorAccent"
                     android:textSize="20sp"
                     card_view:layout_constraintEnd_toEndOf="parent"
                     card_view:layout_constraintStart_toStartOf="parent"
-                    card_view:layout_constraintTop_toBottomOf="@+id/editText" />
+                    card_view:layout_constraintTop_toBottomOf="@+id/login_edittext" />
 
             </LinearLayout>
 
@@ -101,32 +111,34 @@
     </com.google.android.material.card.MaterialCardView>
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/materialButton"
+        android:id="@+id/login_button"
         android:layout_width="383dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="14dp"
-        android:layout_marginTop="15dp"
         android:layout_marginEnd="14dp"
-        android:layout_marginBottom="5dp"
+        android:layout_marginBottom="6dp"
         android:background="@color/colorAccent"
+        android:fontFamily="@font/comfortaa_light"
+        android:onClick="login_button_clicked"
         android:padding="10dp"
         android:text="Войти"
         android:textColor="#fff"
         android:textSize="20sp"
         card_view:cornerRadius="10dp"
-        card_view:layout_constraintBottom_toTopOf="@+id/materialButton2"
+        card_view:layout_constraintBottom_toTopOf="@+id/registry_button"
         card_view:layout_constraintEnd_toEndOf="parent"
-        card_view:layout_constraintStart_toStartOf="parent"
-        card_view:layout_constraintTop_toBottomOf="@+id/card_view" />
+        card_view:layout_constraintStart_toStartOf="parent" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/materialButton2"
+        android:id="@+id/registry_button"
         android:layout_width="383dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="14dp"
         android:layout_marginEnd="14dp"
         android:layout_marginBottom="28dp"
         android:background="@color/colorAccent"
+        android:fontFamily="@font/comfortaa_light"
+        android:onClick="registry_button_clicked"
         android:padding="10dp"
         android:text="Регистрация"
         android:textColor="#fff"
@@ -142,16 +154,13 @@
         android:layout_height="75dp"
         android:layout_marginStart="100dp"
         android:layout_marginEnd="100dp"
-        android:layout_marginBottom="100dp"
         android:fontFamily="@font/comfortaa_light"
         android:gravity="center"
         android:text="FriGo"
         android:textAlignment="center"
         android:textColor="@color/colorAccent"
         android:textSize="45sp"
-        card_view:layout_constraintBottom_toTopOf="@+id/card_view"
         card_view:layout_constraintEnd_toEndOf="parent"
-        card_view:layout_constraintHorizontal_bias="0.0"
         card_view:layout_constraintStart_toStartOf="parent"
         card_view:layout_constraintTop_toBottomOf="@+id/image_logo" />
 

@@ -13,6 +13,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".MenuActivity"></activity>
+        <activity android:name=".RegistryActivity" />
         <activity android:name=".LoginActivity" />
         <activity android:name=".LoadingActivity">
             <intent-filter>
