@@ -86,6 +86,7 @@ public class LoginActivity extends AppCompatActivity {
     private void read_recent_account() {
         Context context = getApplicationContext();
         String pre_path = context.getFilesDir().getPath();
+        //Toast.makeText(this, pre_path, Toast.LENGTH_LONG).show();
         String file_path = pre_path + "/RecentAccounts.txt";
         String[] dataLines = new String[2];
         try {
